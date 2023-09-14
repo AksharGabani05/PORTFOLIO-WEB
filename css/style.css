@@ -8434,14 +8434,14 @@ section {
 
 .skills .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
 }
 .skills .box-container .box {
   padding: 32px;
   text-align: center;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
-  border-radius: 40%;
+  border-radius: 25%;
   background: #1a1a1a;
   transition: all 0.5s;
   border: #56ac50 2px solid;
@@ -8458,7 +8458,8 @@ section {
 }
 .skills .box-container .box h3 {
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
+  text-align: center;
   font-weight: normal;
   text-transform: uppercase;
 }

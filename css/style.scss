@@ -383,13 +383,13 @@ section {
 .skills {
 
   .box-container {
-    @include grid(128px);
+    @include grid(250px);
 
     .box {
       padding: 32px;
       text-align: center;
       box-shadow: $box-shadow;
-      border-radius: 40%;
+      border-radius: 25%;
       background: $light-bg;
       transition: all 0.5s;
       border: #56ac50 2px solid;
@@ -409,11 +409,13 @@ section {
 
       h3 {
         color: $white;
-        font-size: 16px;
+        font-size: 15px;
+        text-align: center;
         font-weight: normal;
         text-transform: uppercase;
       }
     }
+    
   }
 }
 
