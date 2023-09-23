@@ -18,6 +18,16 @@
 
 <body class="prevent-select">
 
+    <div class="overlay">
+        <div class="overlayDoor"></div>
+        <div class="overlayContent">
+            <div class="loader">
+                <div class="inner"></div>
+            </div>
+            
+        </div>
+    </div>
+    
     <!-- header-->
 
     <header>
@@ -112,6 +122,14 @@
         <h1 class="heading"> <span>my</span> skills </h1>
 
         <div class="box-container">
+            <div class="box">
+                <img src="images/c.png">
+                <h3>C</h3>
+            </div>
+            <div class="box">
+                <img src="images/c++.png">
+                <h3>C++</h3>
+            </div>
             <div class="box">
                 <img src="images/html.png">
                 <h3>html</h3>
@@ -587,6 +605,7 @@
         </div>
 
     </section>
+    
 
     <!-- footer -->
 
@@ -671,7 +690,30 @@
 
     
     </script>
-   
+
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+       $(document).ready(function() {
+	// Users can skip the loading process if they want.
+	$('.skip').click(function() {
+		$('.overlay, body').addClass('loaded');
+	})
+	
+	// Will wait for everything on the page to load.
+	$(window).bind('load', function() {
+		$('.overlay, body').addClass('loaded');
+		setTimeout(function() {
+			$('.overlay').css({'display':'none'})
+		}, 5000)
+	});
+	
+	// Will remove overlay after 1min for users cannnot load properly.
+	setTimeout(function() {
+		$('.overlay, body').addClass('loaded');
+	}, 6000);
+})
+    </script>
 </body>
 
 </html>
