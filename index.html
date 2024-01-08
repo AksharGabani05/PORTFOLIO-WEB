@@ -100,7 +100,7 @@
                 </div>
 
 
-                <a href="screencapture-127-0-0-1-5500-index-html-2023-04-14-08_18_21.pdf" target="_blank" class="btn">
+                <a href="images/CV.pdf" target="_blank" class="btn">
                     download CV <i class="fas fa-download"></i> </a>
 
             </div>
@@ -177,6 +177,10 @@
             <div class="box">
                 <img src="images/figma.png">
                 <h3>Figma</h3>
+            </div>
+            <div class="box">
+                <img src="images/coreldraw.png">
+                <h3>CorelDraw x4</h3>
             </div>
 
         </div>
@@ -343,6 +347,30 @@
                 Clients Are Happy With My Work. I Give More Work In Short Time.</p>
             <p>so I'll Try To Improve Myself And Keep My Skills Going. And How Can I Be Helpful To Others</p>
         </div>
+
+    </section>
+
+    <!-- certificate -->
+
+    <section class="certificate" id="certificate">
+
+        <h1 class="heading"> <span>my</span> Certificate </h1>
+
+        <div class="box-container">
+
+           
+            <div class="box">
+                <img src="images/certificate/HTML.png" alt="">
+                
+            </div>
+            <div class="box">
+                <img src="images/certificate/CSS.png" alt="">
+                
+            </div>
+            
+        </div>
+
+        <a href="#" class="btn"> load more <i class="fas fa-redo"></i> </a>
 
     </section>
 
@@ -567,40 +595,51 @@
                 </div>
 
                 <div class="share">
-                    <a href="https://github.com/Akshar2528" target="_blank"
+                    <a href="https://github.com/Akshargabani05" target="_blank"
                         class="fa-brands fa-github"></a>
                     <a href="https://www.facebook.com/akshar.patidar.12?mibextid=ZbWKwL" target="_blank"
                         class="fab fa-facebook-f"></a>
                     <a href="https://www.behance.net/akshargabani1" target="_blank" class="fab fa-behance"></a>
-                    <a href="https://www.instagram.com/akshar_gabani__/?igshid=ZDdkNTZiNTM%3D" target="_blank"
+                    <a href="https://www.instagram.com/coder_developer_/?igshid=ZDdkNTZiNTM%3D" target="_blank"
                         class="fab fa-instagram"></a>
                     <a href="https://www.linkedin.com/in/akshar-gabani-149477253/ " target="_blank"
                         class="fab fa-linkedin"></a>
                         <a href="https://codepen.io/AKSHAR-Gabani" target="_blank"
                         class="fa-brands fa-codepen"></a>
-                        <a href="https://youtube.com/@AG_TECH_SOLUTIONS?si=FuRjOVNMfqGZka4K" target="_blank"
+                        <a href="https://youtube.com/@coder_developer_?si=FuRjOVNMfqGZka4K" target="_blank"
                         class="fa-brands fa-youtube"></a>
                 </div>
 
             </div>
 
-            <form action="">
+            <form name="submit-to-google-sheet">
 
                 <div class="inputBox">
-                    <input type="text" placeholder="your name">
-                    <input type="number" placeholder="your number">
+                    <input type="text" name="name" placeholder="your name" required>
+                    <input type="number" name="number" placeholder="your number" required>
                 </div>
 
                 <div class="inputBox">
-                    <input type="email" placeholder="your email">
-                    <input type="text" placeholder="your subject">
+                    <input type="email" name="email" placeholder="your email" required>
+                    <input type="text" name="subject" placeholder="your subject" required>
                 </div>
 
-                <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" placeholder="your message" id="message" cols="30" rows="10" required></textarea>
 
-                <input type="submit" value="send message" class="btn">
+                <input type="submit" value="send message" class="btn" id="btnShowMsg" onClick="showMessage()">
 
             </form>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzSWJ-m_p9YFwYEtBSrF261xLePI5I99jHy4eYoBbfqgj3RkmXU4fsFNnKfhX7R1CyV/exec'
+                const form = document.forms['submit-to-google-sheet']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
 
         </div>
 
@@ -713,6 +752,14 @@
 		$('.overlay, body').addClass('loaded');
 	}, 6000);
 })
+    </script>
+
+    <!-- alert -->
+
+    <script type="text/javascript">
+        function showMessage() {
+            alert("Thank you 🙏");
+        }
     </script>
 </body>
 

@@ -8434,19 +8434,8 @@ section {
 .home .image img {
   height: 500px;
   width: 500px;
-  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  border-radius: 100%;
   animation: iphonetptp 1s infinite alternate linear;
-}
-@keyframes iphonetptp {
-  0% {
-    transform: translateY(2%);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-2%);
-  }
 }
 .home .content {
   flex: 1 1 344px;
@@ -8690,6 +8679,29 @@ section {
   padding: 16px 0;
   line-height: 2;
   font-size: 20px;
+}
+
+.certificate {
+  text-align: center;
+}
+.certificate .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.certificate .box-container .box {
+  height: 50rem;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  border: #56ac50 2px solid;
+}
+.certificate .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contact .row {
@@ -9075,4 +9087,3 @@ a {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
   transition: all 0.5s;
 }/*# sourceMappingURL=style.css.map */
-

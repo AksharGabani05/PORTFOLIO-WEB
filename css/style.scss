@@ -353,23 +353,11 @@ section {
     img {
       height: 500px;
       width: 500px;
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      border-radius: 100%;
       animation: iphonetptp 1s infinite alternate linear;
     }
 
-    @keyframes iphonetptp {
-      0% {
-        transform: translateY(2%);
-      }
-
-      50% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(-2%);
-      }
-    }
+    
   }
 
   .content {
@@ -681,6 +669,32 @@ section {
     font-size: 20px;
   }
 }
+
+// certificate
+
+.certificate {
+  text-align: center;
+
+  .box-container {
+    @include grid(35rem);
+    margin-bottom: 32px;
+
+    .box {
+      height: 50rem;
+      overflow: hidden;
+      position: relative;
+      padding: 10px;
+      border: #56ac50 2px solid;
+
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      }
+    }
+  }
 
 
 
